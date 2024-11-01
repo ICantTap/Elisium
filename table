@@ -1,32 +1,36 @@
 script_key = "KEY HERE";
-getgenv().Elisium = {
+getgenv().elisium = {
     Camlock = {
         Enabled = true,
         AimPart = "UpperTorso",
         Prediction = 0.123,
-        Smoothness = 0.217,
+        Smoothness = 0.09,
         Mode = "Button",
         Spectate = false
     },
     TargetAim = {
         enabled = true,
-        targetPart = "HumanoidRootPart",
-        prediction = 0.129
+        targetPart = "UpperTorso",
+        prediction = 0.1161431
     },
     AutoAir = {
-        Enabled = false,
+        Enabled = true,
         Delay = 0
     },
     AutoPred = {
-        Enabled = false,
+        Enabled = true,
         Mode = "Advanced" -- // Ping, Advanced, Distance
+    },
+    Macro = {
+        Enabled = true,
+        Speed = 0.01
     },
     Cframe = {
         enabled = false,
-        speed = 1
+        speed = 2
     },
     Fov = {
-        Visible = false,
+        Visible = true,
         Color = Color3.fromRGB(0, 0, 0),
         Transparency = 1,
         Size = 90,
@@ -35,11 +39,19 @@ getgenv().Elisium = {
     },
     Strafe = {
         Enabled = false,
-        StrafeSpeed = 25,
-        StrafeRadius = 15,
+        StrafeSpeed = 10,
+        StrafeRadius = 10,
         StrafeHeight = 3,
         Mode = "CSync", -- // Strafe, Random, CSync
         Spoof = true
+    },
+    Desync = {
+        Toggled = false,
+        Speed = 0.1,
+        Mode = "Walkable", -- // Default, Random, Walkable
+        X = 5000,
+        Y = 5000,
+        Z = 5000
     },
     Visualizer = {
         Enabled = false,
@@ -52,7 +64,7 @@ getgenv().Elisium = {
         Material = "ForceField"
     },
     LineTrail = {
-        Enabled = false,
+        Enabled = true,
         Color = Color3.fromRGB(0, 0, 0),
         Material = "ForceField",
         Speed = 1,
