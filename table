@@ -5,20 +5,20 @@ getgenv().Elisium = {
         AimPart = "UpperTorso",
         Prediction = 0.123,
         Smoothness = 0.09,
-        Mode = "Controller",
+        Mode = "Button",
         Spectate = false
     },
     TargetAim = {
         enabled = true,
         targetPart = "UpperTorso",
-        prediction = 0.123
+        prediction = 0.129
     },
     AutoAir = {
-        Enabled = true,
+        Enabled = false,
         Delay = 0
     },
     AutoPred = {
-        Enabled = true,
+        Enabled = false,
         Mode = "Advanced" -- // Ping, Advanced, Distance
     },
     Cframe = {
@@ -52,7 +52,7 @@ getgenv().Elisium = {
         Material = "ForceField"
     },
     LineTrail = {
-        Enabled = true,
+        Enabled = false,
         Color = Color3.fromRGB(0, 0, 0),
         Material = "ForceField",
         Speed = 1,
