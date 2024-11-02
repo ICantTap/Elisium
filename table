@@ -1,17 +1,17 @@
 script_key = "KEY HERE";
-getgenv().elisium = {
+getgenv().Elisium = {
     Camlock = {
         Enabled = true,
         AimPart = "UpperTorso",
         Prediction = 0.123,
         Smoothness = 0.09,
-        Mode = "Button",
+        Mode = "Controller",
         Spectate = false
     },
     TargetAim = {
         enabled = true,
         targetPart = "UpperTorso",
-        prediction = 0.1161431
+        prediction = 0.123
     },
     AutoAir = {
         Enabled = true,
@@ -20,10 +20,6 @@ getgenv().elisium = {
     AutoPred = {
         Enabled = true,
         Mode = "Advanced" -- // Ping, Advanced, Distance
-    },
-    Macro = {
-        Enabled = true,
-        Speed = 0.01
     },
     Cframe = {
         enabled = false,
@@ -44,14 +40,6 @@ getgenv().elisium = {
         StrafeHeight = 3,
         Mode = "CSync", -- // Strafe, Random, CSync
         Spoof = true
-    },
-    Desync = {
-        Toggled = false,
-        Speed = 0.1,
-        Mode = "Walkable", -- // Default, Random, Walkable
-        X = 5000,
-        Y = 5000,
-        Z = 5000
     },
     Visualizer = {
         Enabled = false,
