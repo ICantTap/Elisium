@@ -1,75 +1,107 @@
 script_key = "KEY HERE";
 getgenv().Elisium = {
-    Camlock = {
-        Enabled = true,
-        AimPart = "UpperTorso",
-        Prediction = 0.129,
-        Smoothness = 0.1689,
-        Mode = "Button",
-        Spectate = false
+      ['Intro'] = {
+        ['Enabled'] = true,
+     },
+     ['Camlock'] = {
+        ['Enabled'] = true,
+        ['AimPart'] = "HumanoidRootPart",
+        ['Prediction'] = 0.129,
+        ['Smoothness'] = 0.8761,
+        ['Mode'] = "Button",
+        ['Spectate'] = false
     },
-    TargetAim = {
-        enabled = true,
-        targetPart = "UpperTorso",
-        prediction = 0.129
+    ['TargetAim'] = {
+        ['enabled'] = true,
+        ['targetPart'] = "UpperTorso",
+        ['prediction'] = 0.129
     },
-    AutoAir = {
-        Enabled = false,
-        Delay = 0
+    ['Offsets'] = {
+        ['Enabled'] = true,
+        ['jumpOffset'] = 0.0,
+        ['fallOffset'] = -0.0
     },
-    AutoPred = {
-        Enabled = false,
-        Mode = "Advanced" -- // Ping, Advanced, Distance
+    ['AutoAir'] = {
+        ['Enabled'] = false,
+        ['Delay'] = 0
     },
-    Cframe = {
-        enabled = false,
-        speed = 2
+    ['Resolver'] = {
+        ['Enabled'] = false,
+        ['Method'] = "RecalculateVelocity",
+        ['PredictionSettings'] = {
+            ['HitPart'] = "Head"
+        }
     },
-    Fov = {
-        Visible = true,
-        Color = Color3.fromRGB(0, 0, 0),
-        Transparency = 1,
-        Size = 90,
-        Thickness = 2,
-        Filled = false
+    ['AutoPred'] = {
+        ['Enabled'] = false,
+        ['Mode'] = "Advanced" -- // Ping, Advanced, Distance
     },
-    Strafe = {
-        Enabled = false,
-        StrafeSpeed = 10,
-        StrafeRadius = 10,
-        StrafeHeight = 3,
-        Mode = "CSync", -- // Strafe, Random, CSync
-        Spoof = true
+    ['Cframe'] = {
+        ['enabled'] = false,
+        ['speed'] = 2
     },
-    Visualizer = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField"
+    ['Fov'] = {
+        ['Visible'] = true,
+        ['Color'] = Color3.fromRGB(0, 0, 0),
+        ['Transparency'] = 1,
+        ['Size'] = 90,
+        ['Thickness'] = 2,
+        ['Filled'] = false
     },
-    Selfcham = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField"
+    ['Strafe'] = {
+        ['Enabled'] = false,
+        ['StrafeSpeed'] = 25,
+        ['StrafeRadius'] = 25,
+        ['StrafeHeight'] = 3,
+        ['Mode'] = "CSync", -- // Strafe, Random, CSync
+        ['Spoof'] = true
     },
-    LineTrail = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField",
-        Speed = 1,
-        Width = 0.3,
-        TransparencyStart = 0,
-        TransparencyEnd = 5,
-        MinLength = 0.1
+    ['Visualizer'] = {
+        ['Enabled'] = false,
+        ['Color'] = Color3.fromRGB(0, 0, 0),
+        ['Material'] = "ForceField"
     },
-    BallTrail = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField",
-        Speed = 0,
-        Lifetime = 5,
-        Size = Vector3.new(1, 1, 1),
-        TransparencyStart = 0,
-        TransparencyEnd = 1
+    ['Selfcham'] = {
+        ['Enabled'] = false,
+        ['Color'] = Color3.fromRGB(0, 0, 0),
+        ['Material'] = "ForceField"
+    },
+    ['LineTrail'] = {
+        ['Enabled'] = false,
+        ['Color'] = Color3.fromRGB(0, 0, 0),
+        ['Material'] = "ForceField",
+        ['Speed'] = 1,
+        ['Width'] = 0.3,
+        ['TransparencyStart'] = 0,
+        ['TransparencyEnd'] = 5,
+        ['MinLength'] = 0.1
+    },
+    ['BallTrail'] = {
+        ['Enabled'] = false,
+        ['Color'] = Color3.fromRGB(0, 0, 0),
+        ['Material'] = "ForceField",
+        ['Speed'] = 0,
+        ['Lifetime'] = 5,
+        ['Size'] = Vector3.new(1, 1, 1),
+        ['TransparencyStart'] = 0,
+        ['TransparencyEnd'] = 1
+    },
+    ['Mouse_TP'] = {
+        ['Enabled'] = true,
+        ['UsePrediction'] = true,
+        ['Method'] = "Jumping", -- Options: Health, Jumping
+        ['Part'] = "HumanoidRootPart",
+        ['Prediction'] = 1,
+        ['Health_Value'] = 100,
+        ['Jump_Wait'] = 1
+    },
+    ['NoDelay'] = {
+      ['Enabled'] = false,
+    },
+    ['ConfiguresOFTEXTURES'] = {
+        ['ON'] = true,
+        ['Material'] = Enum.Material.Brick,
+        ['Color'] = Color3.fromRGB(244, 244, 244)
     },
     Loaded = false
 }
