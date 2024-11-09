@@ -1,29 +1,31 @@
-script_key = "KEY HERE";
 getgenv().Elisium = {
       ['Intro'] = {
         ['Enabled'] = true,
      },
      ['Camlock'] = {
         ['Enabled'] = true,
-        ['AimPart'] = "HumanoidRootPart",
+        ['AimPart'] = "LowerTorso",
         ['Prediction'] = 0.129,
-        ['Smoothness'] = 0.8761,
+        ['Smoothness'] = 0.15,
         ['Mode'] = "Button",
         ['Spectate'] = false
     },
     ['TargetAim'] = {
         ['enabled'] = true,
-        ['targetPart'] = "UpperTorso",
-        ['prediction'] = 0.129
+        ['targetPart'] = "HumanoidRootPart",
+        ['prediction'] = 0.14633
     },
     ['Offsets'] = {
         ['Enabled'] = true,
-        ['jumpOffset'] = 0.0,
-        ['fallOffset'] = -0.0
+        ['jumpOffset'] = -1.45,
+        ['fallOffset'] = -1.67
     },
     ['AutoAir'] = {
         ['Enabled'] = false,
         ['Delay'] = 0
+    },
+    ['Macro'] = {
+        ['Enabled'] = true,
     },
     ['Resolver'] = {
         ['Enabled'] = false,
@@ -89,9 +91,9 @@ getgenv().Elisium = {
     ['Mouse_TP'] = {
         ['Enabled'] = true,
         ['UsePrediction'] = true,
-        ['Method'] = "Jumping", -- Options: Health, Jumping
+        ['Method'] = "Health", -- Options: Health, Jumping
         ['Part'] = "HumanoidRootPart",
-        ['Prediction'] = 1,
+        ['Prediction'] = 0.14633,
         ['Health_Value'] = 100,
         ['Jump_Wait'] = 1
     },
@@ -99,11 +101,11 @@ getgenv().Elisium = {
       ['Enabled'] = false,
     },
     ['ConfiguresOFTEXTURES'] = {
-        ['ON'] = true,
+        ['ON'] = false,
         ['Material'] = Enum.Material.Brick,
         ['Color'] = Color3.fromRGB(244, 244, 244)
     },
     Loaded = false
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0b0d345b0958e036d71061d77fe90c2f.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ICantTap/Imthebest/refs/heads/main/ElisiumTaps99"))()
