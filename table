@@ -13,7 +13,7 @@ getgenv().Elisium = {
         ["Prediction"] = 0.129,
         ["AirPrediction"] = 0.14633,
         ["FOV"] = {
-            ["Visible"] = true, — Turn FOV off/on
+            ["Visible"] = true,
             ["Size"] = 60
         },
         ["Checks"] = {
