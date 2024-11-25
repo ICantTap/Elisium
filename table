@@ -1,4 +1,143 @@
 getgenv().Elisium = {
+    ["NgaGame"] = "DH", -- DH, HC every time u change to HC to a DH game/copy change this.
+    ["LookAt"] = {
+        ["Enabled"] = false -- Mostly for HC
+    },
+    ["Optimization"] = {
+         ["Enabled"] = true -- For less FPS
+    },
+    ["SilentAim"] = { -- Doesnt work in HC
+        ["Enabled"] = true, 
+        ["HitPart"] = "HumanoidRootPart",
+        ["AirPart"] = "UpperTorso",
+        ["Prediction"] = 0.129,
+        ["AirPrediction"] = 0.14633,
+        ["FOV"] = {
+            ["Visible"] = true, — Turn FOV off/on
+            ["Size"] = 60
+        },
+        ["Checks"] = {
+            ["WallCheck"] = true,
+            ["AntiGroundShots"] = true,
+            ["KOCheck"] = true,
+            ["FriendCheck"] = true
+        },
+        ["Hitchance"] = { ["Value"] = 300 },
+    },
+    ["SkibidIntro"] = {
+        ["Enabled"] = true
+    },
+    ["AimAssist"] = {
+        ["Enabled"] = true,
+        ["AimPart"] = "HumanoidRootPart",
+        ["Prediction"] = 0.18,
+        ["Smoothness"] = 0.217,
+        ["Mode"] = "Button",
+        ["Spectate"] = false
+    },
+    ["xfTargetAim"] = { -- Works in HC
+        ["Enabled"] = false,
+        ["AimPart"] = "HumanoidRootPart",
+        ["Prediction"] = 0.129
+    },
+    ["Offsets"] = {
+        ["Enabled"] = true,
+        ["JumpOffset"] = -1.45,
+        ["FallOffset"] = -1.67
+    },
+    ["AutoAir"] = {
+        ["Enabled"] = false,
+        ["Delay"] = 0
+    },
+    ["Macro"] = {
+        ["Enabled"] = true
+    },
+    ["Resolver"] = {
+        ["Enabled"] = false,
+        ["Method"] = "RecalculateVelocity",
+        ["PredictionSettings"] = {
+            ["HitPart"] = "Head"
+        }
+    },
+    ["AutoPred"] = {
+        ["Enabled"] = false,
+        ["Mode"] = "Advanced" 
+    },
+    ["Cframe"] = {
+        ["Enabled"] = false,
+        ["Speed"] = 2
+    },
+    ["Easing"] = {
+        ["EasingStyle"] = Enum.EasingStyle.Quad,
+        ["EasingDirection"] = Enum.EasingDirection.InOut
+    },
+    ["Fov"] = { -- Don't use this
+        ["Visible"] = false,
+        ["Color"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 1,
+        ["Size"] = 90,
+        ["Thickness"] = 2,
+        ["Filled"] = false
+    },
+    ["Strafe"] = {
+        ["Enabled"] = false,
+        ["StrafeSpeed"] = 25,
+        ["StrafeRadius"] = 25,
+        ["StrafeHeight"] = 3,
+        ["Mode"] = "CSync", -- Strafe, Random, CSync
+        ["Spoof"] = true
+    },
+    ["Visualizer"] = {
+        ["Enabled"] = false,
+        ["Color"] = Color3.fromRGB(0, 0, 0),
+        ["Material"] = "ForceField"
+    },
+    ["Selfcham"] = {
+        ["Enabled"] = false,
+        ["Color"] = Color3.fromRGB(0, 0, 0),
+        ["Material"] = "ForceField"
+    },
+    ["LineTrail"] = {
+        ["Enabled"] = false,
+        ["Color"] = Color3.fromRGB(0, 0, 0),
+        ["Material"] = "ForceField",
+        ["Speed"] = 1,
+        ["Width"] = 0.3,
+        ["TransparencyStart"] = 0,
+        ["TransparencyEnd"] = 5,
+        ["MinLength"] = 0.1
+    },
+    ["BallTrail"] = {
+        ["Enabled"] = false,
+        ["Color"] = Color3.fromRGB(0, 0, 0),
+        ["Material"] = "ForceField",
+        ["Speed"] = 0,
+        ["Lifetime"] = 5,
+        ["Size"] = Vector3.new(1, 1, 1),
+        ["TransparencyStart"] = 0,
+        ["TransparencyEnd"] = 1
+    },
+    ["MouseTP"] = {
+        ["Enabled"] = true,
+        ["UsePrediction"] = true,
+        ["Method"] = "Jumping", 
+        ["Part"] = "HumanoidRootPart",
+        ["Prediction"] = 0.17,
+        ["Health_Value"] = 100,
+        ["Jump_Wait"] = 1
+    },
+    ["NoDelay"] = {
+        ["Enabled"] = false
+    },
+    ["Textures"] = {
+        ["ON"] = false,
+        ["Material"] = Enum.Material.Brick,
+        ["Color"] = Color3.fromRGB(244, 244, 244)
+    },
+    ["Loaded"] = false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ICantTap/WhyIcantTap./refs/heads/main/Elisium"))() getgenv().Elisium = {
     ["Intro"] = {
         ["Enabled"] = true
     },
