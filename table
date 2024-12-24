@@ -1,106 +1,77 @@
-script_key="PASTE KEY HERE";
-getgenv().Elisium = {
-    NgaGame = "DH", -- Change to "HQ" when switching modes
-    LookAt = {Enabled = false}, -- FOR HQ
-    SkibidIntro = {Enabled = true},
-    AimAssist = {
-        Enabled = true,
-        AimPart = "HumanoidRootPart",
-        Prediction = 0.18,
-        Smoothness = 0.217,
-        Mode = "Button",
-        Spectate = false
-    },
-    TargetAim = {Enabled = false, AimPart = "UpperTorso", Prediction = 0.129},
-    Offsets = {Enabled = true, JumpOffset = -0.10, FallOffset = -0.15},
-    AutoAir = {Enabled = false, Delay = 0},
-    Macro = {Enabled = true},
-    Resolver = {
-        Enabled = false,
-        Method = "RecalculateVelocity",
-        PredictionSettings = {HitPart = "Head"}
-    },
-    AutoPred = {Enabled = false, Mode = "Advanced"},
-    Cframe = {Enabled = false, Speed = 2},
-    Easing = {
-        EasingStyle = Enum.EasingStyle.Quad,
-        EasingDirection = Enum.EasingDirection.InOut
-    },
-    Strafe = {
-        Enabled = false,
-        StrafeSpeed = 25,
-        StrafeRadius = 25,
-        StrafeHeight = 3,
-        Mode = "CSync", -- Strafe, Random, CSync
-        Spoof = true
-    },
-    Visualizer = {Enabled = false, Color = Color3.fromRGB(0, 0, 0), Material = "ForceField"},
-    Selfcham = {Enabled = false, Color = Color3.fromRGB(0, 0, 0), Material = "ForceField"},
-    LineTrail = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField",
-        Speed = 1,
-        Width = 0.3,
-        TransparencyStart = 0,
-        TransparencyEnd = 5,
-        MinLength = 0.1
-    },
-    BallTrail = {
-        Enabled = false,
-        Color = Color3.fromRGB(0, 0, 0),
-        Material = "ForceField",
-        Speed = 0,
-        Lifetime = 5,
-        Size = Vector3.new(1, 1, 1),
-        TransparencyStart = 0,
-        TransparencyEnd = 1
-    },
-    MouseTP = {
-        Enabled = true,
-        UsePrediction = true,
-        Method = "Jumping",
-        Part = "HumanoidRootPart",
-        Prediction = 0.08168919191881,
-        Health_Value = 100,
-        Jump_Wait = 0.1
-    },
-    NoDelay = {Enabled = false},
-    Optimization = {
-        Enabled = false, -- Enable if experiencing FPS drops
-        TargetFPS = 300,
-        DisableShadows = true,
-        DisableTextures = true,
-        LowerGraphics = true,
-        LimitParticles = true,
-        DisableAnimations = true,
-        SimplifyPhysics = true
-    },
-    Ohio360 = {
-        Enabled = true, -- dont turn off
-        RotationSpeed = 2500
-    },
-    SilentAim = { 
-        Enabled = true,
-        HitPart = "UpperTorso",
-        AirPart = "HumanoidRootPart",
-        Prediction = 0.129,
-        AirPrediction = 0.129,
-        FOV = {Visible = false, Size = 100},
-        Checks = {
-            WallCheck = true,
-            AntiGroundShots = true,
-            KOCheck = true,
-            FriendCheck = true
-        },
-        Hitchance = {Value = 100}
-    },
-    Textures = {
-        ON = false,
-        Material = Enum.Material.Brick,
-        Color = Color3.fromRGB(244, 244, 244)
-    },
-    Loaded = false
+script_key="";
+getgenv().Aether = {
+    ["Intro"] = {
+        ["Enabled"] = true,
+        ["GameMode"] = "HQ", -- HC, DH
+        ["Sigma"] = false, -- DONT TOUCH
+    };
+    ["Camlock"] = {
+        ["Enabled"] = true,
+        ["AimPart"] = "UpperTorso",
+        ["Prediction"] = 0.129,
+        ["Smoothness"] = 0.217,
+        ["Mode"] = "Button",
+        ["SeeTarget"] = false
+    };
+    ["TargetAim"] = { -- Works in HC
+        ["Enabled"] = true,
+        ["AimPart"] = "UpperTorso",
+        ["Prediction"] = 0.0129 -- For HC use 0.0 then a number pred if u want it to tap
+    };
+    ["Offsets"] = {
+        ["Enabled"] = true,
+        ["Jump"] = -0.1,
+        ["Fall"] = -0.1,
+    };
+    ["AutoAir"] = {
+        ["Enabled"] = false,
+        ["Delay"] = 0
+    };
+    ["Macro"] = {
+        ["Enabled"] = true,
+    };
+    ["AutoPred"] = {
+        ["Enabled"] = false,
+        ["Mode"] = "Advanced" 
+    };
+    ["Cframe"] = {
+        ["enabled"] = false,
+        ["speed"] = 2
+    };
+    ["Easing"] = {
+        ["EasingStyle"] = Enum.EasingStyle.Back,
+        ["EasingDirection"] = Enum.EasingDirection.InOut
+    };
+    ["Fov"] = {
+        ["Visible"] = false,
+        ["Color"] = Color3.fromRGB(255, 0, 0),
+        ["Transparency"] = 1,
+        ["Size"] = 90,
+        ["Thickness"] = 4,
+        ["Filled"] = false
+    };
+    ["Strafe"] = {
+        ["Enabled"] = false,
+        ["StrafeSpeed"] = 25,
+        ["StrafeRadius"] = 25,
+        ["StrafeHeight"] = 3,
+        ["Mode"] = "CSync", 
+        ["Spoof"] = true
+    };
+    ["BoolanTP"] = {
+        ["Enabled"] = true,
+        ["UsePrediction"] = false,
+        ["Method"] = "Jumping", 
+        ["Part"] = "HumanoidRootPart",
+        ["Prediction"] = 0.091,
+        ["Health_Value"] = 25,
+        ["Jump_Wait"] = 0.09
+    };
+    ["RobloxTextures"] = {
+        ["Enabled"] = false,
+        ["Material"] = Enum.Material.Brick,
+        ["Color"] = Color3.fromRGB(244, 244, 244)
+    };
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ICantTap/WhyIcantTap./refs/heads/main/Elisium"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ICantTap/WhyIcantTap./refs/heads/main/Aether"))()
